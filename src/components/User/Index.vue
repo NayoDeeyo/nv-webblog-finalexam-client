@@ -1,26 +1,26 @@
 <template>
   <div>
-    <h1>Get All Users</h1>
+    <h1>Get All Car</h1>
     <p><button v-on:click="logout">Logout</button></p>
     <div>
       <div>
-        <button v-on:click="navigateTo('/user/create')">สร้างข้อมูลผู้ใช้</button>
+        <button v-on:click="navigateTo('/user/create')">สร้างข้อมูลยานพาหนะ</button>
       </div>
-      <h2>จำนวนผู้ใช้ {{ users.length }}</h2>
+      <h2>จำนวนยานพาหนะ {{ users.length }}</h2>
     </div>
     <div v-for="i in users" v-bind:key="i.id">
-      <div>ชื่อ: {{ i.name }}</div>
-      <div>นามสกุล: {{ i.lastname }}</div>
-      <div>status: {{ i.status }}</div>
-      <div>type: {{ i.type }}</div>
+      <div>brand: {{ i.name }}</div>
+      <div>model: {{ i.lastname }}</div>
+      <div>engine_capacity: {{ i.status }}</div>
+      <div>category: {{ i.type }}</div>
 
       <div>
-        <button v-on:click="navigateTo('/user/' + i.id)">ดูข้อมูลผู้ใช้</button>
+        <button v-on:click="navigateTo('/user/' + i.id)">ดูข้อมูลยานพาหนะ</button>
       </div>
       <div>
-        <button @click="navigateTo('/user/edit/' + i.id)">edit user</button>
+        <button @click="navigateTo('/user/edit/' + i.id)">edit car</button>
       </div>
-      <div><button @click="deleteUser(i)">delete user</button></div>
+      <div><button @click="deleteUser(i)">delete car</button></div>
       <hr />
     </div>
   </div>

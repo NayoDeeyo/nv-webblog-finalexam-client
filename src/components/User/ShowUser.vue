@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Get User By Id</h1>
+    <h1>Get Car By Id</h1>
     <div>id: {{ user.id }}</div>
     <div>ชื่อ: {{ user.name }}</div>
     <div>นามสกุล: {{ user.lastname }}</div>
